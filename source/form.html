@@ -25,68 +25,68 @@
           </nav>
         </header>
 
-          <main>   
+          <main>
             <form action="https://echo.htmlacademy.ru/courses" method="POST">
               <h1 class="form__title">Подбор программы</h1>
               <h2 class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
-              
-              <fieldset class="form-group">
+
+              <fieldset class="form__group">
                 <legend class="visually-hidden">Информация о коте</legend>
-                <label class="form__name-label" for="name">Имя: *</label>
-                <input class="form__name" name="name" type="text" placeholder="Барсик">
+                <label class="form__label" for="name">Имя: *</label>
+                <input class="form__input-text" name="name" type="text" placeholder="Барсик">
 
-                <label class="form__weigth-label" for="weigth">Вес (кг): *</label>
-                <input class="form__weigth" name="weigth" type="number" placeholder="7">
+                <label class="form__label" for="weigth">Вес (кг): *</label>
+                <input class="form__input-text" name="weigth" type="number" placeholder="7">
 
-                <label class="form__age-label" for="age">Возраст (лет): *</label>
-                <input class="form__age" name="age" type="number" placeholder="7">
+                <label class="form__label" for="age">Возраст (лет): *</label>
+                <input class="form__input-text" name="age" type="number" placeholder="7">
               </fieldset>
 
-              <fieldset class="form-group">
+              <fieldset class="form__group">
                 <legend class="visually-hidden">Цель</legend>
-                <input class="form__target-radio" type="radio" name="target" id="target-slim">
-                <label for="target-slim">похудение</label>
+                <input class="form__input-radio" type="radio" name="target" id="target-slim">
+                <label for="form__label">похудение</label>
 
-                <input type="radio" name="target" id="target-fat">
-                <label for="target-fat">набор массы</label>
+                <input class="form__input-radio" type="radio" name="target" id="target-fat">
+                <label class="form__label" for="target-fat">набор массы</label>
 
-                <input type="radio" name="target" id="target-unknown">
-                <label for="target-unknown">Не знаю (Нужен ваш совет)</label>
+                <input class="form__input-radio" type="radio" name="target" id="target-unknown">
+                <label class="form__label" for="target-unknown">Не знаю (Нужен ваш совет)</label>
               </fieldset>
 
-              <fieldset class="form-group">
-                <legend class="form-group-title">Контактные данные (владельца кота)</legend>
+              <fieldset class="form__group">
+                <legend class="form__group-title">Контактные данные (владельца кота)</legend>
 
-                <label for="email">e-mail:*</label>
-                <input type="text" name="form__email" id="email">
-                
-                <label for="phone">телефон:*</label>
-                <input type="text" name="form__phone" id="phone">
+                <label class="form__label" for="email">e-mail:*</label>
+                <input class="form__input-text" type="text" name="form__email" id="email">
+
+                <label class="form__label" for="phone">телефон:*</label>
+                <input class="form__input-text" type="text" name="form__phone" id="phone">
               </fieldset>
 
-              <fieldset class="form-group">
-                <legend>Комментарий</legend>
-                <textarea name="form__comment" id="comment" cols="30" rows="10"></textarea>
-                <label class="visually-hidden" for="comment">комментарий</label>
+              <fieldset class="form__group">
+                <legend class="form__group-title">Комментарий</legend>
+                <textarea name="form__textarea" id="comment" cols="30" rows="10"></textarea>
+                <label class="form__label" class="visually-hidden" for="comment">комментарий</label>
               </fieldset>
 
               <fieldset>
-                <legend class="form-group-title">Дополнительно</legend>
-                <input type="checkbox" name="extention" id="ext-sweetener">
-                <label for="ext-sweetener">сахарозаменитель</label>
+                <legend class="form__group-title">Дополнительно</legend>
+                <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-sweetener">
+                <label class="form__label" for="ext-sweetener">сахарозаменитель</label>
 
-                <input type="checkbox" name="extention" id="ext-water">
-                <label for="ext-water">питьевая вода</label>
+                <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-water">
+                <label class="form__label" for="ext-water">питьевая вода</label>
 
-                <input type="checkbox" name="extention" id="ext-milk">
-                <label for="ext-milk">молоко</label>
+                <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-milk">
+                <label class="form__label" for="ext-milk">молоко</label>
 
-                <input type="checkbox" name="extention" id="ext-vitamins">
-                <label for="ext-vitamins">витамины</label>
+                <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-vitamins">
+                <label class="form__label" for="ext-vitamins">витамины</label>
               </fieldset>
-              <input class="form__submit" type="submit" name="send" id="form-submit" value="отправить заявку" aria-label="Отправить заявку">
+              <button class="form__submit">отправить заявку</button>
               <p class="form__description">* — Обязательные поля</p>
-            </form> 
+            </form>
           </main>
 
           <footer>
