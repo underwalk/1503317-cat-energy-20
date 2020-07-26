@@ -6,8 +6,10 @@
   </head>
   <body>
     <header class="header">
-      <a href=""><img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37"></a>
-      <a href=""><img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18"></a>
+      <a href="" aria-label="На главную">
+        <img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37">
+        <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18">
+      </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -63,13 +65,58 @@
           </li>
         </ul>
       </section>
+
+      <section class="example">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто <br>
+                                   заменив свой обычный корм на Cat <br>
+                                   Energy Slim. Отличный результат без <br>
+                                   изнуряющих тренировок! При этом он не <br>
+                                   менял своих привычек и по-прежнему <br>
+                                   спит по 16 часов в день
+          </p>
+          
+          <div class="example__weight">
+              <span class="weigth-text">5 кг</span>
+              <span class="weigth-title">снижение веса</span>
+          </div>
+
+          <div class="time">
+            <span class="weigth-time">5 кг</span>
+            <span class="weigth-time">снижение веса</span>
+          </div>
+
+          <h3 class="example__coast">Затраты на питание: 15 000 РУБ.</h3>
+          <div class="example__cat">
+            <img class="example__cat--before" src="https://via.placeholder.com/311x232" alt="Как изменится ваш кот" width="311" height="232">
+            <img class="example__cat--after" src="https://via.placeholder.com/311x232" alt="Как изменится ваш кот" width="311" height="232">
+            
+            <div>
+              <span class="example__cat-text">было</span>
+              <span class="example__cat-progress-bar"></span>
+              <span class="example__cat-text">стало</span>
+            </div>
+          </div>
+      </section>
+
     </main>
     <footer>
+      <section class="location">
+        <div class="location__info">
+          <h2 class="info__title">приглашаем к сотрудничеству дилеров!</h2>
+          <p class="info__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="location__map">
+          <img class="map__image" src="https://via.placeholder.com/320x362" alt="Карта с нашим расположением" width="320" height="362">
+          <span class="map__pinner"></span>
+        </div>
+      </section>
+
       <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18">
       <ul class="social">
-      <li class="social-item"><a href="" class="social__vkontakte" aria-label="Вконтакте"></a></li>
-      <li class="social-item"><a href="" class="social__instagram" aria-label="Инстаграм"></a></li>
-      <li class="social-item"><a href="" class="social__facebook" aria-label="Facebook"></a></li>
+        <li class="social-item"><a href="" class="social__link social__link--vkontakte" aria-label="Вконтакте"></a></li>
+        <li class="social-item"><a href="" class="social__link social__link--instagram" aria-label="Инстаграм"></a></li>
+        <li class="social-item"><a href="" class="social__link social__link--facebook" aria-label="Facebook"></a></li>
       </ul>
       <div class="copyright">
       <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link copyright__link--left" aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация">HTML Academy</a>

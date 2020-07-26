@@ -6,33 +6,109 @@
     </head>
     <body>
         <header class="header">
-            <a href="index.html" aria-label="На главную"><img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37"></a>
-            <a href="index.html" aria-label="На главную"><img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18"></a>
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                    <a href="index.html" class="main-nav__link" aria-label="На главную">главная</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="catalog.html" class="main-nav__link" aria-label="В каталог">каталог продукции</a>
-                </li>
-                <li class="main-nav__item">
-                    <a href="" class="main-nav__link">подбор программы</a>
-                </li>
-              </ul>
-            </nav>
-          </header>
+          <a href="index.html" aria-label="На главную">
+            <img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37">
+            <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18">
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                  <a href="index.html" class="main-nav__link" aria-label="На главную">главная</a>
+              </li>
+              <li class="main-nav__item">
+                  <a href="catalog.html" class="main-nav__link" aria-label="В каталог">каталог продукции</a>
+              </li>
+              <li class="main-nav__item">
+                  <a href="" class="main-nav__link">подбор программы</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+          <main>   
+            <form action="https://echo.htmlacademy.ru/courses" method="POST">
+              <h1 class="form__title">Подбор программы</h1>
+              <h2 class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+              
+              <fieldset class="form-group">
+                <legend class="visually-hidden">Информация о коте</legend>
+                <label class="form__name-label" for="name">Имя: *</label>
+                <input class="form__name" name="name" type="text" placeholder="Барсик">
+
+                <label class="form__weigth-label" for="weigth">Вес (кг): *</label>
+                <input class="form__weigth" name="weigth" type="number" placeholder="7">
+
+                <label class="form__age-label" for="age">Возраст (лет): *</label>
+                <input class="form__age" name="age" type="number" placeholder="7">
+              </fieldset>
+
+              <fieldset class="form-group">
+                <legend class="visually-hidden">Цель</legend>
+                <input class="form__target-radio" type="radio" name="target" id="target-slim">
+                <label for="target-slim">похудение</label>
+
+                <input type="radio" name="target" id="target-fat">
+                <label for="target-fat">набор массы</label>
+
+                <input type="radio" name="target" id="target-unknown">
+                <label for="target-unknown">Не знаю (Нужен ваш совет)</label>
+              </fieldset>
+
+              <fieldset class="form-group">
+                <legend class="form-group-title">Контактные данные (владельца кота)</legend>
+
+                <label for="email">e-mail:*</label>
+                <input type="text" name="form__email" id="email">
+                
+                <label for="phone">телефон:*</label>
+                <input type="text" name="form__phone" id="phone">
+              </fieldset>
+
+              <fieldset class="form-group">
+                <legend>Комментарий</legend>
+                <textarea name="form__comment" id="comment" cols="30" rows="10"></textarea>
+                <label class="visually-hidden" for="comment">комментарий</label>
+              </fieldset>
+
+              <fieldset>
+                <legend class="form-group-title">Дополнительно</legend>
+                <input type="checkbox" name="extention" id="ext-sweetener">
+                <label for="ext-sweetener">сахарозаменитель</label>
+
+                <input type="checkbox" name="extention" id="ext-water">
+                <label for="ext-water">питьевая вода</label>
+
+                <input type="checkbox" name="extention" id="ext-milk">
+                <label for="ext-milk">молоко</label>
+
+                <input type="checkbox" name="extention" id="ext-vitamins">
+                <label for="ext-vitamins">витамины</label>
+              </fieldset>
+              <input class="form__submit" type="submit" name="send" id="form-submit" value="отправить заявку" aria-label="Отправить заявку">
+              <p class="form__description">* — Обязательные поля</p>
+            </form> 
+          </main>
 
           <footer>
+            <section class="location">
+              <div class="location__info">
+                <h2 class="info__title">приглашаем к сотрудничеству дилеров!</h2>
+                <p class="info__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+              </div>
+              <div class="location__map">
+                <img class="map__image" src="https://via.placeholder.com/320x362" alt="Карта с нашим расположением" width="320" height="362">
+                <span class="map__pinner"></span>
+              </div>
+            </section>
             <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18">
             <ul class="social">
-                <li class="social-item"><a href="" class="social__vkontakte" aria-label="Вконтакте"></a></li>
-                <li class="social-item"><a href="" class="social__instagram" aria-label="Инстаграм"></a></li>
-                <li class="social-item"><a href="" class="social__facebook" aria-label="Facebook"></a></li>
+              <li class="social-item"><a href="" class="social__link social__link--vkontakte" aria-label="Вконтакте"></a></li>
+              <li class="social-item"><a href="" class="social__link social__link--instagram" aria-label="Инстаграм"></a></li>
+              <li class="social-item"><a href="" class="social__link social__link--facebook" aria-label="Facebook"></a></li>
             </ul>
             <div class="copyright">
-                <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link copyright__link--left" aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация">HTML Academy</a>
-                <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon" aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация"></a>
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link copyright__link--left" aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация">HTML Academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__icon" aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация"></a>
             </div>
         </footer>
     </body>
