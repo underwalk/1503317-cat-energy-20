@@ -1,0 +1,16 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
+body {
+    width: 100%;
+    margin: auto;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    padding: 0 20px 22px 20px;
+  }
+
+  .visually-hidden {
+    @include VisuallyHidden;
+  }

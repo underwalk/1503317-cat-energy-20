@@ -1,0 +1,59 @@
+.catalog-ext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog-ext__container {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.catalog-ext__title {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+
+    margin: 0;
+    padding: 25px 20px 0 20px;
+}
+
+.catalog-ext__item{
+    @include UnstyledList;
+}
+
+.catalog-ext__name{
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.catalog-ext__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 25px 0 0 22px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catalog-ext__button{
+    @include Button;
+    width: 260px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalog-ext__info {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+}

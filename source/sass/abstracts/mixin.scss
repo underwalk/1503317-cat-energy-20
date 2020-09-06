@@ -1,0 +1,54 @@
+@mixin H1Center {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+@mixin IndentZero {
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+@mixin VisuallyHidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+@mixin Button {
+    display: block;
+    padding: 0;
+    background-color: $basic_green;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $basic-white;
+    align-content: center;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    padding: 10px;
+}
+
+@mixin UnstyledLink {
+    text-decoration: none;
+}
+
+@mixin UnstyledList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

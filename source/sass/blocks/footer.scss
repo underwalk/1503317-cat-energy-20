@@ -1,0 +1,121 @@
+.location__info {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 15px 0px 0 20px;
+}
+
+.location__info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 320px;
+}
+
+.footer-container {
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background: $background-grey;
+}
+
+.info__title {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+
+    width: 140px;
+
+    text-transform: uppercase;
+}
+
+.info__text {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    width: 158px;
+}
+
+
+.example-controller {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.controller__button {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    
+    border: 0;
+    text-transform: uppercase;
+}
+
+.map__yandex {
+    width: 100%;
+    height: 362px
+}
+
+.footer__logo-mobile {
+    padding: 50px 95px 30px 95px;
+}
+
+.social {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 20px 0 20px 0;
+    flex-wrap: wrap;
+    gap: 38px;
+}
+
+.social-item {
+    @include UnstyledList;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    padding: 15px 0 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright__link {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    align-self: center;
+
+    color: $special_dark-grey;
+    text-decoration: none;
+}
+
+.copyright__icon {
+    align-self: flex-end;
+}
+
+.htmlacadymy-logo {
+    fill: $special_grey-2;
+    margin: 3px -5px 0 0;
+}

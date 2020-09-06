@@ -1,0 +1,67 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
+.content {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.content__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-image {
+    position: relative;
+    background: url(../../img/index-background-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: 320px 310px;
+    height: 420px;
+    width: 320px;
+}
+
+.content-image__additional {
+    background: url(../../img/index-can-mobile@1x.png);
+    background-repeat: no-repeat;
+    height: 320px;
+    width: 320px;
+    margin: 25px 0 0 20px;
+}
+
+.content__header {
+    @include H1Center;
+    color: $basic_white;
+    font-size: 36px;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.content__text {
+    @include IndentZero;
+    text-align: center;
+}
+
+.content-text {
+    @include IndentZero;
+    color: $basic_white;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+
+    margin-top: 16px;
+}
+
+.content-button {
+    @include Button;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 22px;
+    padding: 11px 74px 11px 74px;
+}
