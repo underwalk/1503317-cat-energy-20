@@ -3,8 +3,8 @@
     width: 279px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    padding: 25px 20px 0 20px;
+    margin-top: 45px;
+    padding: 30px 20px 0 20px;
 }
 
 .example__title {
@@ -23,12 +23,12 @@
     font-size: 14px;
     line-height: 18px;
 
-    padding-top: 20px;
+    padding-top: 16px;
 }
 
 .example-wrapper {
     display: flex;
-    margin-top: 40px;
+    margin-top: 39px;
 }
 
 
@@ -42,7 +42,7 @@
     overflow: hidden;
     text-transform: uppercase;
     border: 1px solid $special_grey;
-    padding: 10px 40px 10px 43px; 
+    padding: 5px 45px 10px 43px;
 
 }
 
@@ -65,12 +65,12 @@
     padding-top: 0px;
 
     width: 87px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 18px;
 }
 
 .example-time {
-    margin-left: 40px;
+    margin-left: 35px;
 }
 
 .time-text {
@@ -82,7 +82,7 @@
 
     text-transform: uppercase;
     border: 1px solid $special_grey;
-    padding: 10px 25px 10px 20px; 
+    padding: 5px 25px 13px 20px;
 
 }
 
@@ -102,7 +102,7 @@
     opacity: .99;
     
     width: 87px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 18px;
 }
 

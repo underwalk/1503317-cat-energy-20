@@ -52,3 +52,9 @@
     margin: 0;
     padding: 0;
 }
+
+@mixin OswaldNormal {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+}
