@@ -35,18 +35,19 @@
 }
 
 .form__list {
-    margin: 7px 0 0 0;
+    margin: 5px 0 0 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 15px;
 }
 
 .form__item {
     @include UnstyledList;
     display: flex;
     margin: 0 0 0 10px;
+    color: $special_dark-grey;
 }
 
 .form__group {
@@ -79,6 +80,14 @@
     width: 100%;
     padding: 15px 10px 10px 15px;
     margin-left: 10px;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special_dark-grey;
+    text-transform: uppercase;
 }
 
 .form__input-text::placeholder {
@@ -107,6 +116,7 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+    color: $special_dark-grey-2;
 }
 
 .from__list-target {
@@ -124,8 +134,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 26px;
-    margin-top: 25px;
-    margin-left: 5px;
+    margin: 25px 0 0 5px;
 }
 
 .form__group-contacts {
@@ -133,8 +142,7 @@
 }
 
 .from__list-contacts {
-    margin-top: 30px;
-    margin-left: -5px;
+    margin: 30px 0 0 -5px;
 }
 
 .form__group-title-comment {
@@ -160,7 +168,15 @@
 
 .form__list-additional {
     margin-top: 20px;
-    gap: 0px;
+    gap: 14px;
+}
+
+.form__label-additional {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .form__submit {
@@ -168,9 +184,9 @@
     border: 0;
     width: 280px;
     height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 15px auto auto 23px;
 }
 
 .form__description {
@@ -184,3 +200,45 @@
 
     margin: 5px 0 0 5px;
 }
+
+//checkbox
+
+.form__input-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .form__input-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .form__input-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $special_grey;
+    border-radius: 50%;
+    margin-right: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  .form__input-radio:checked+label::before {
+    background-color: $basic-green;
+    background-image: url("/source/img/radiobutton-active.svg");
+    background-size: 6px 6px;
+  }
+
+  .form__input-radio:disabled+label::before {
+    background-color: $special_grey;
+  }
+
+
+  //radiobox

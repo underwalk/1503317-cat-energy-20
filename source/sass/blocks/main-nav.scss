@@ -8,6 +8,9 @@
 }
 
 .main-nav__list {
+    @media ($mobile-width-only) {
+        display: none;
+    }
     display: none;
     height: 65px;
 }

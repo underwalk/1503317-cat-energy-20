@@ -24,9 +24,11 @@
 
 .catalog-ext__item{
     @include UnstyledList;
+    color: $special_dark-grey;
 }
 
-.catalog-ext__name{
+.catalog-ext__name {
+    text-transform: uppercase;
     margin-bottom: 15px;
     margin-top: 20px;
 }
@@ -46,6 +48,7 @@
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+    color: $basic-white;
 }
 
 .catalog-ext__info {
@@ -56,4 +59,5 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
+    color: $special_dark-grey-2;
 }

@@ -1,8 +1,3 @@
-.page-main__catalog {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .catalog-title {
     font-family: Oswald;
@@ -138,7 +133,7 @@
 
 .catalog__item-show-more-text {
     margin: 6px 0 0 0;
-
+    color: $special_dark-grey;
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
@@ -150,7 +145,7 @@
     background-color: $basic_grey;
     color: $special_dark-grey;
     text-transform: uppercase;
-
+    color: $special_dark-grey;
     font-family: Oswald;
     font-style: normal;
     font-weight: normal;
