@@ -1,0 +1,21 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
+.header {
+    display: flex;
+    padding: 11px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    padding: 0 10px 0 10px;
+}
+
+.header-logo__link {
+    margin-left: 20px;
+}

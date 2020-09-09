@@ -1,0 +1,109 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
+.promo {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 280px;
+    margin-top: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.promo__container {
+    @include UnstyledList;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.promo__item {
+    @include UnstyledList;
+    position: relative;
+    background-color: $basic_grey;
+    padding: 14px 0 0 0;
+    padding-bottom: 15px;
+    margin-top: 0px;
+    // margin-bottom: 20px;
+}
+
+.promo__title {
+    @include OswaldNormal;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+.promo__title::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    background: url(../img/icon-cat-slim.svg) no-repeat;
+    bottom: -15px;
+    left: 15px;
+    width: 50px;
+}
+
+.promo__item::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    top: 26px;
+    left: 23px;
+    width: 50px;
+    background-color: #68b738;
+    border-radius: 50%;
+}
+
+.promo__text {
+    margin: 40px 0 23px 20px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.promo__link {
+    @include UnstyledLink;
+    display: block;
+    width: auto;
+
+    color: $basic-black;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    border-top: 2px solid $border-color;
+    border-spacing: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.promo__title-pro {
+    @include OswaldNormal;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    
+    font-size: 24px;
+    margin-left: 43px;
+}
+
+.promo__title-pro::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 67px;
+    background: url(../../img/icon-cat-pro.svg) no-repeat;
+    bottom: -28px;
+    left: -30px;
+}

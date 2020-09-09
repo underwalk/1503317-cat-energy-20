@@ -1,0 +1,17 @@
+.controller__progress-bar {
+    background: #FFFFFF;
+    width: 84px;
+    height: 14px;
+    position: absolute;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.controller__progress-container {
+    position: relative;
+    background: #68B738;
+    border-radius: 6px;
+    width: 35px;
+    height: 6px;
+}
