@@ -2,4 +2,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (min-width: $tablet-width) {
+        width: 805px;   
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: $desktop-width;
+    }
+}
+
+.page-main__example {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        width: $desktop-width;
+        margin-left: 210px;
+        margin-right: 185px;
+        background: linear-gradient(0deg, $background-grey 70%, $basic-white 50%);
+            height: 665px;
+    }
 }

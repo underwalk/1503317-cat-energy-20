@@ -6,7 +6,16 @@
     padding: 11px 20px;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 6px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 40px;
+    }
 }
+
 
 .header__container {
     display: flex;
@@ -14,8 +23,39 @@
     align-items: center;
     width: 320px;
     padding: 0 10px 0 10px;
+
+    @media (min-width: $tablet-width) {
+        width: $tablet-width;
+        margin-top: 15px;
+        justify-content: flex-start;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: $desktop-width;
+        margin-top: 25px;
+        justify-content: space-between;
+    }
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    width: 174px;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 100px;
+    }
 }
 
 .header-logo__link {
     margin-left: 20px;
+}
+
+.header-logo__title {
+    
+    @media (min-width: $desktop-width) {
+
+    }
 }

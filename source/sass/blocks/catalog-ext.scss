@@ -9,6 +9,11 @@
     width: 320px;
     flex-direction: column;
     align-items: flex-start;
+
+    @media (min-width: $tablet-width) {
+        padding-top: 40px;
+        width: 100%;
+    }
 }
 
 .catalog-ext__title {
@@ -20,17 +25,70 @@
 
     margin: 0;
     padding: 25px 20px 0 20px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 36px;
+        line-height: 36px;
+        width: 338px;
+        padding-right: 35px;
+        margin-left: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 63px;
+        margin-top: 7px;
+    }
 }
 
 .catalog-ext__item{
     @include UnstyledList;
     color: $special_dark-grey;
+
+    @media (min-width: $tablet-width) {
+        width: 708px;
+        outline: 1px solid $special_grey;
+        padding-bottom: 30px;
+        padding-bottom: 3px;
+        height: 135px;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 979px;
+        height: 72px;
+        padding-bottom: 0;
+    }
+}
+
+.catalog-ext__item-container {
+    @media (min-width: $tablet-width) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 735px;
+    }
 }
 
 .catalog-ext__name {
     text-transform: uppercase;
     margin-bottom: 15px;
     margin-top: 20px;
+
+    @media (min-width: $tablet-width) {
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 85px;
+        margin-top: 6px;
+        width: 200px;
+    }
 }
 
 .catalog-ext__list {
@@ -40,6 +98,12 @@
     padding: 25px 0 0 22px;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 60px;
+        padding-left: 0px;
+        gap: 0;
+    }
 }
 
 .catalog-ext__button{
@@ -49,6 +113,28 @@
     margin-left: auto;
     margin-right: auto;
     color: $basic-white;
+
+    @media (min-width: $tablet-width) {
+        width: 632px;
+        font-size: 16px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 244px;
+        margin: 0;
+        margin-top: -8px;
+        align-self: center;
+        
+    }
+}
+
+.catalog-ext__count {
+    
+    @media (min-width: $tablet-width) {
+        margin-right: 50px;
+    }
 }
 
 .catalog-ext__info {
@@ -60,4 +146,28 @@
     font-size: 14px;
     line-height: 14px;
     color: $special_dark-grey-2;
+
+    @media (min-width: $tablet-width) {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        margin-right: 40px;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        justify-content: space-between;
+        width: 286px;
+        margin-top: 0;
+    }
+}
+
+.catalog-ext__price {
+    @media (min-width: $desktop-width) {
+        width: 42px;
+        text-transform: uppercase;
+    }
 }

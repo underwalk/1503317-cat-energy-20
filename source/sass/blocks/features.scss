@@ -3,6 +3,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+
+    @media (min-width: $tablet-width) {
+        width: 785px;
+        padding-top: 35px;
+        padding-bottom: 55px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: $desktop-width;
+        margin-top: 40px;
+        padding-left: 180px;
+    }
 }
 
 .features__title {
@@ -10,6 +22,12 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 40px;
+    margin-top: 25px;
+    @media (min-width: $tablet-width) {
+        margin-top: 0;
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
 .features__list {
@@ -19,12 +37,49 @@
     flex-wrap: wrap;
     margin-top: 40px;
     gap: 26px;
+
+    @media (min-width: $tablet-width) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0;
+        margin-top: 185px;
+        row-gap: 245px;
+    }
+
+    @media (min-width: $desktop-width) {
+        gap: 35px;
+    }
 }
+
 
 .features__item {
     @include UnstyledList;
     position: relative;
     margin-left: 40px;
+    width: 176px;
+    @media (min-width: $tablet-width) {
+        width: 289px;
+        margin: 0;
+    }
+}
+
+
+.features__item:nth-last-child(2n + 1){
+    
+    @media (min-width: $tablet-width) {
+        margin-left: 69px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 0;
+    }
+}
+
+.features__text--cr {
+    display: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+    }
 }
 
 .features__text {
@@ -36,6 +91,14 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
+    width: 199px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0px;
+        width: 265px;
+    }
 }
 
 .features__item::before {
@@ -45,6 +108,31 @@
     width: 50px;
     left: -76px;
     top: 3px;
+
+    @media (min-width: $tablet-width) {
+        top: -99px;
+        left: 15px;
+    }
+}
+
+.features__number {
+    display: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+        position: absolute;
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 280px;
+        line-height: 280px;
+        text-align: center;
+        color: #F2F2F2;
+
+        top: -150px;
+        left: 120px;
+        z-index: -1;
+    }
+
 }
 
 .features__item--leaf::before {
@@ -67,9 +155,16 @@
     content: "";
     position: absolute;
     background-color: #68b738;
-    width: 60px;
+    width: 60px;    
     height: 60px;
     left: -80px;
     top: -1px;
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+        left: 3px;
+        top: -112px;
+        width: 79px;
+        height: 79px;
+    }
 }

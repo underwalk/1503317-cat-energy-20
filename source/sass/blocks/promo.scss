@@ -7,19 +7,35 @@
     flex-direction: column;
     justify-content: center;
     width: 280px;
-    margin-top: 22px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 25px 20px 0 20px;
     flex-wrap: wrap;
     gap: 20px;
+
+    @media (min-width: $tablet-width) {
+        width: 708px;
+        margin: 45px 75px 0 0;
+        gap: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: $desktop-width;
+        flex-direction: row;
+        gap: 80px;
+        // margin-right: 0;
+        margin-left: 30px;
+    }
 }
 
 .promo__container {
     @include UnstyledList;
 
     display: flex;
-    align-self: center;
+    align-self: flex-start;
     justify-content: center;
+
+    @media (min-width: $desktop-width) {
+        margin-top: 220px;
+    }
 }
 
 .promo__item {
@@ -29,7 +45,22 @@
     padding: 14px 0 0 0;
     padding-bottom: 15px;
     margin-top: 0px;
-    // margin-bottom: 20px;
+    
+    @media (min-width: $tablet-width) {
+        padding: 40px 0 0 35px;
+        height: 332px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 570px;
+        padding-left: 0;
+    }
+}
+
+.promo__item:nth-child(2n) {
+    @media (min-width: $desktop-width) {
+        // margin-left: 20px;
+    }
 }
 
 .promo__title {
@@ -40,6 +71,19 @@
     
     font-size: 24px;
     margin-left: 15px;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 35px 0 0 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: center;
+        margin-left: 25px;
+        
+    }
 }
 
 .promo__title::before {
@@ -50,6 +94,22 @@
     bottom: -15px;
     left: 15px;
     width: 50px;
+    @media (min-width: $tablet-width) {
+        background-size: 140px 194px;
+        height: 200px;
+        width: 200px;
+        left: auto;
+        right: 31px;
+        top: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+        background-size: 100px 100px;
+        height: 100px;
+        width: 100px;
+        left: 30px;
+        top: -35px;
+    }
 }
 
 .promo__item::before {
@@ -59,8 +119,24 @@
     top: 26px;
     left: 23px;
     width: 50px;
-    background-color: #68b738;
+    background-color: $basic_green;
     border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+        background-size: 140px 194px;
+        height: 200px;
+        width: 200px;
+        left: auto;
+        right: 63px;
+        top: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+        height: 100px;
+        width: 100px;
+        right: 415px;
+        top: 45px;
+    }
 }
 
 .promo__text {
@@ -71,6 +147,35 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
+
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 27px 0 0px 15px;
+        width: 377px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 75px;
+        margin-left: 55px;
+        width: 467px;
+    }
+}
+
+.promo__text--pro {
+    @media (min-width: $tablet-width) {
+        width: 344px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 457px;
+    }
+}
+
+.promo__text--cr {
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
 }
 
 .promo__link {
@@ -86,6 +191,20 @@
     margin-left: 20px;
     margin-right: 20px;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+        
+        border: none;
+        margin-top: 35px;
+        margin-left: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 10px;
+        margin-left: 56px;
+    }
 }
 
 .promo__title-pro {
@@ -96,6 +215,18 @@
     
     font-size: 24px;
     margin-left: 43px;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 36px 0 0 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: center;
+        margin-left: 70px;
+    }
 }
 
 .promo__title-pro::before {
@@ -106,4 +237,21 @@
     background: url(../../img/icon-cat-pro.svg) no-repeat;
     bottom: -28px;
     left: -30px;
+
+    @media (min-width: $tablet-width) {
+        background-size: 268px 112px;
+        height: 200px;
+        width: 268px;
+        left: auto;
+        right: 28px;
+        top: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+        background-size: 135px 125px;
+        height: 125px;
+        width: 135px;
+        right: 400px;
+        top: -45px;
+    }
 }
