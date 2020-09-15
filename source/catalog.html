@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/oswaldmedium.woff2">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1fd9feb4-79ae-4809-a166-788826ab1307&lang=ru_RU" type="text/javascript"></script>
     <script src="js/map.js"> </script>
@@ -160,7 +161,7 @@
                 </svg>
                 <!-- <img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37"> -->
               </a>
-              <a href="/source/index.html" aria-label="На главную">
+              <a href="index.html" aria-label="На главную">
                 <svg class="header-logo__title" width="101" height="18">
                   <use xlink:href="#header-logo-title"></use>
                 </svg>
@@ -175,7 +176,7 @@
     
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                    <a href="/source/index.html" class="main-nav__link">главная</a>
+                    <a href="index.html" class="main-nav__link">главная</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="catalog.html" class="main-nav__link" aria-label="В каталог">каталог продукции</a>
@@ -197,7 +198,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture>
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/chicken-small-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/chicken-small-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/chicken-small-mobile@1x.webp">
+                          <img src="img/chicken-small-tablet@1x.png"
+                              alt="Cat Energy PRO 500 г" >
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -214,14 +222,21 @@
                               <dt class="catalog__description-title">Цена</dt>
                               <dd class="catalog__description-text">700 Р.</dd>
                           </dl>
-                          </div>
+                        </div>
                   </div>
                   <a class="catalog__link-button" aria-label="Заказать">заказать</a>
               </li>
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture>
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/chicken-big-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/chicken-big-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/chicken-big-mobile@1x.webp">
+                          <img src="img/chicken-big-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -245,7 +260,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture class="catalog__image">
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/fish-small-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/fish-small-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/fish-small-mobile@1x.webp">
+                          <img src="img/fish-small-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -269,7 +291,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture class="catalog__image">
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/fish-big-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/fish-big-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/fish-big-mobile@1x.webp">
+                          <img src="img/fish-big-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -293,7 +322,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture class="catalog__image">
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/buckwheat-small-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/buckwheat-small-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/buckwheat-small-mobile@1x.webp">
+                          <img src="img/buckwheat-small-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -317,7 +353,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture class="catalog__image">
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/buckwheat-big-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/buckwheat-big-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/buckwheat-big-mobile@1x.webp">
+                          <img src="img/buckwheat-big-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -341,7 +384,14 @@
               <li class="catalog__item">
                   <div class="catalog__item-group-container">
                       <a href="" class="catalog__link" aria-label="Cat Energy PRO 500 г">
-                          <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86">
+                        <picture class="catalog__image">
+                          <source class="header-logo" media="(min-width: 1150px)" srcset="./img/rice-small-desktop@1x.webp">
+                          <source class="header-logo" media="(min-width: 768px)" srcset="./img/rice-small-tablet@1x.webp">
+                          <source class="header-logo" media="(max-width: 768px)" srcset="./img/rice-small-mobile@1x.webp">
+                          <img src="img/rice-small-mobile@1x.jpg"
+                              alt="Cat Energy PRO 500 г">
+                        </picture>
+                          <!-- <img class="catalog__image" src="./img/chicken-small-mobile@1x.jpg" alt="Cat Energy PRO 500 г" width="68" height="86"> -->
                       </a>
                       
                       <div class="catalog__item-contraier">
@@ -364,8 +414,8 @@
               </li>
               <li class="catalog__item">
                   <div class="catalog__item-show-more">
-                      <a href="" class="catalog__link-plus" aria-label="Показать еще 100500 товаров">
-                          <svg class="catalog__link-image" width="33" height="37">
+                      <a href="" aria-label="Показать еще 100500 товаров">
+                          <svg class="catalog__link-plus" width="33" height="37">
                               <use xlink:href="#plus-mobile"></use>
                           </svg>
                       </a>

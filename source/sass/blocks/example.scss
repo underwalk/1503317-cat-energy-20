@@ -139,6 +139,10 @@
         margin-top: 15px;
         margin-left: 30px;
     }
+
+    @media (min-width: $desktop-width) {
+        background-color: $background-grey; 
+    }
 }
 
 .weigth-time--cr {
@@ -200,6 +204,10 @@
         margin-left: 10px;
         width: 142px;
     }
+
+    @media (min-width: $desktop-width) {
+        background-color: $background-grey; 
+    }
 }
 
 .example__coast {
@@ -256,7 +264,7 @@
 
     @media (min-width: $tablet-width){ 
         padding-bottom: 45px;
-        margin-left: 241px;
+        margin-left: 110px;
         // background-image: linear-gradient($basic-white 0%,$basic-white 29%,$basic-white 29%,$background-grey 100%);
         background: linear-gradient(0deg, $background-grey 72%, $basic-white 50%);
     }
@@ -280,7 +288,8 @@
     padding-bottom: 20px;
 
     @media (min-width: $tablet-width){ 
-        background-color: $basic-white;
+        display: none;
+        // background-color: $basic-white;
     }
 }
 
@@ -320,25 +329,28 @@
 }
 
 .example-controller {
+    position: absolute;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-
-    margin-top: 30px;
+    align-items: center;
+    bottom: 38px;
+    left: 221px;
     @media (min-width: $tablet-width) {
         position: absolute;
         top: 520px;
-        left: 120px;
-        margin-top: 35px;
+        left: 95px;
+        margin-top: 0;
     }
 
     @media (min-width: $desktop-width) {
-        margin-top: 45px;
+        margin-top: 16px;
         margin-left: -15px;
     }
 }
 
 .controller__button {
+    background: transparent;
     @media (min-width: $tablet-width) {
         font-family: Oswald;
         font-style: normal;
@@ -353,5 +365,48 @@
 }
 
 .controller__button:last-child {
-margin-left: 20px;
+    margin-left: 20px;
+}
+
+///cat
+
+.example__cat-img-wrapper {
+    position: relative;
+}
+
+.example-cat__img {
+    display: block;
+    position: absolute;
+    width: 316px;
+    bottom: -90px;
+    left: -254px;
+
+    @media (min-width: $tablet-width) {
+        width: 690px;
+        bottom: -231px;
+        left: -372px;
+    }
+
+    @media (min-width: $desktop-width) {
+        bottom: -169px;
+        left: -364px; 
+    }
+}
+
+.example-cat__img--after {
+
+    display: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+        clip: rect(auto,auto,auto,338px);
+    }
+
+    @media (min-width: $desktop-width) {
+        clip: rect(auto, auto, auto, 365px);
+    }
+    
+}
+
+.example-cat__img--before {
+    clip: rect(auto, 365px, auto, auto);
 }

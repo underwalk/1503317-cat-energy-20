@@ -2,256 +2,248 @@
 @import "abstracts/variables.scss";
 
 .promo {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 280px;
-    margin: 25px 20px 0 20px;
-    flex-wrap: wrap;
-    gap: 20px;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 280px;
+ margin: 25px 20px 0 20px;
+ flex-wrap: wrap;
+ gap: 20px;
 
-    @media (min-width: $tablet-width) {
-        width: 708px;
-        margin: 45px 75px 0 0;
-        gap: 30px;
-    }
+ @media (min-width: $tablet-width) {
+  width: 708px;
+  margin: 45px 75px 0 0;
+  gap: 30px;
+ }
 
-    @media (min-width: $desktop-width) {
-        width: $desktop-width;
-        flex-direction: row;
-        gap: 80px;
-        // margin-right: 0;
-        margin-left: 30px;
-    }
+ @media (min-width: $desktop-width) {
+  width: $desktop-width;
+  flex-direction: row;
+  gap: 80px;
+  margin-left: 30px;
+ }
 }
 
 .promo__container {
-    @include UnstyledList;
+ @include UnstyledList;
 
-    display: flex;
-    align-self: flex-start;
-    justify-content: center;
+ display: flex;
+ align-self: flex-start;
+ justify-content: center;
 
-    @media (min-width: $desktop-width) {
-        margin-top: 220px;
-    }
+ @media (min-width: $desktop-width) {
+  margin-top: 220px;
+ }
 }
 
 .promo__item {
-    @include UnstyledList;
-    position: relative;
-    background-color: $basic_grey;
-    padding: 14px 0 0 0;
-    padding-bottom: 15px;
-    margin-top: 0px;
-    
-    @media (min-width: $tablet-width) {
-        padding: 40px 0 0 35px;
-        height: 332px;
-    }
+ @include UnstyledList;
+ position: relative;
+ background-color: $basic_grey;
+ padding: 14px 0 0 0;
+ padding-bottom: 15px;
+ margin-top: 0px;
 
-    @media (min-width: $desktop-width) {
-        width: 570px;
-        padding-left: 0;
-    }
-}
+ @media (min-width: $tablet-width) {
+  padding: 40px 0 0 35px;
+  height: 332px;
+ }
 
-.promo__item:nth-child(2n) {
-    @media (min-width: $desktop-width) {
-        // margin-left: 20px;
-    }
+ @media (min-width: $desktop-width) {
+  width: 570px;
+  padding-left: 0;
+ }
 }
 
 .promo__title {
-    @include OswaldNormal;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    
-    font-size: 24px;
-    margin-left: 15px;
+ @include OswaldNormal;
+ position: relative;
+ text-align: center;
+ text-transform: uppercase;
 
-    @media (min-width: $tablet-width) {
-        text-align: left;
-        font-size: 36px;
-        line-height: 36px;
-        margin: 35px 0 0 15px;
-    }
+ font-size: 24px;
+ margin-left: 15px;
 
-    @media (min-width: $desktop-width) {
-        text-align: center;
-        margin-left: 25px;
-        
-    }
+ @media (min-width: $tablet-width) {
+  text-align: left;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 35px 0 0 15px;
+ }
+
+ @media (min-width: $desktop-width) {
+  text-align: center;
+  margin-left: 25px;
+ }
 }
 
 .promo__title::before {
-    content: "";
-    position: absolute;
-    height: 50px;
-    background: url(../img/icon-cat-slim.svg) no-repeat;
-    bottom: -15px;
-    left: 15px;
-    width: 50px;
-    @media (min-width: $tablet-width) {
-        background-size: 140px 194px;
-        height: 200px;
-        width: 200px;
-        left: auto;
-        right: 31px;
-        top: 5px;
-    }
+ content: "";
+ position: absolute;
+ height: 50px;
+ background: url(../img/icon-cat-slim.svg) no-repeat;
+ bottom: -15px;
+ left: 15px;
+ width: 50px;
+ @media (min-width: $tablet-width) {
+  background-size: 140px 194px;
+  height: 200px;
+  width: 200px;
+  left: auto;
+  right: 31px;
+  top: 5px;
+ }
 
-    @media (min-width: $desktop-width) {
-        background-size: 100px 100px;
-        height: 100px;
-        width: 100px;
-        left: 30px;
-        top: -35px;
-    }
+ @media (min-width: $desktop-width) {
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  left: 30px;
+  top: -35px;
+ }
 }
 
 .promo__item::before {
-    content: "";
-    position: absolute;
-    height: 50px;
-    top: 26px;
-    left: 23px;
-    width: 50px;
-    background-color: $basic_green;
-    border-radius: 50%;
+ content: "";
+ position: absolute;
+ height: 50px;
+ top: 26px;
+ left: 23px;
+ width: 50px;
+ background-color: $basic_green;
+ border-radius: 50%;
 
-    @media (min-width: $tablet-width) {
-        background-size: 140px 194px;
-        height: 200px;
-        width: 200px;
-        left: auto;
-        right: 63px;
-        top: 90px;
-    }
+ @media (min-width: $tablet-width) {
+  background-size: 140px 194px;
+  height: 200px;
+  width: 200px;
+  left: auto;
+  right: 63px;
+  top: 90px;
+ }
 
-    @media (min-width: $desktop-width) {
-        height: 100px;
-        width: 100px;
-        right: 415px;
-        top: 45px;
-    }
+ @media (min-width: $desktop-width) {
+  height: 100px;
+  width: 100px;
+  right: 415px;
+  top: 45px;
+ }
 }
 
 .promo__text {
-    margin: 40px 0 23px 20px;
+ margin: 40px 0 23px 20px;
 
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+ font-family: Arial;
+ font-style: normal;
+ font-weight: normal;
+ font-size: 14px;
+ line-height: 18px;
 
-    @media (min-width: $tablet-width) {
-        font-size: 16px;
-        line-height: 24px;
-        margin: 27px 0 0px 15px;
-        width: 377px;
-    }
+ @media (min-width: $tablet-width) {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 27px 0 0px 15px;
+  width: 377px;
+ }
 
-    @media (min-width: $desktop-width) {
-        margin-top: 75px;
-        margin-left: 55px;
-        width: 467px;
-    }
+ @media (min-width: $desktop-width) {
+  margin-top: 75px;
+  margin-left: 55px;
+  width: 467px;
+ }
 }
 
 .promo__text--pro {
-    @media (min-width: $tablet-width) {
-        width: 344px;
-    }
+ @media (min-width: $tablet-width) {
+  width: 344px;
+ }
 
-    @media (min-width: $desktop-width) {
-        width: 457px;
-    }
+ @media (min-width: $desktop-width) {
+  width: 457px;
+ }
 }
 
 .promo__text--cr {
-    @media (min-width: $tablet-width) {
-        display: none;
-    }
+ @media (min-width: $tablet-width) {
+  display: none;
+ }
 }
 
 .promo__link {
-    @include UnstyledLink;
-    display: block;
-    width: auto;
+ @include UnstyledLink;
+ display: block;
+ width: auto;
 
-    color: $basic-black;
-    padding-top: 18px;
-    padding-bottom: 5px;
-    border-top: 2px solid $border-color;
-    border-spacing: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-transform: uppercase;
+ color: $basic-black;
+ padding-top: 18px;
+ padding-bottom: 5px;
+ border-top: 2px solid $border-color;
+ border-spacing: 15px;
+ margin-left: 20px;
+ margin-right: 20px;
+ text-transform: uppercase;
 
-    @media (min-width: $tablet-width) {
-        font-size: 20px;
-        line-height: 30px;
-        
-        border: none;
-        margin-top: 35px;
-        margin-left: 15px;
-    }
+ @media (min-width: $tablet-width) {
+  font-size: 20px;
+  line-height: 30px;
 
-    @media (min-width: $desktop-width) {
-        margin-top: 10px;
-        margin-left: 56px;
-    }
+  border: none;
+  margin-top: 35px;
+  margin-left: 15px;
+ }
+
+ @media (min-width: $desktop-width) {
+  margin-top: 10px;
+  margin-left: 56px;
+ }
 }
 
 .promo__title-pro {
-    @include OswaldNormal;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    
-    font-size: 24px;
-    margin-left: 43px;
+ @include OswaldNormal;
+ position: relative;
+ text-align: center;
+ text-transform: uppercase;
 
-    @media (min-width: $tablet-width) {
-        text-align: left;
-        font-size: 36px;
-        line-height: 36px;
-        margin: 36px 0 0 15px;
-    }
+ font-size: 24px;
+ margin-left: 43px;
 
-    @media (min-width: $desktop-width) {
-        text-align: center;
-        margin-left: 70px;
-    }
+ @media (min-width: $tablet-width) {
+  text-align: left;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 36px 0 0 15px;
+ }
+
+ @media (min-width: $desktop-width) {
+  text-align: center;
+  margin-left: 70px;
+ }
 }
 
 .promo__title-pro::before {
-    content: "";
-    position: absolute;
-    height: 50px;
-    width: 67px;
-    background: url(../../img/icon-cat-pro.svg) no-repeat;
-    bottom: -28px;
-    left: -30px;
+ content: "";
+ position: absolute;
+ height: 50px;
+ width: 67px;
+ background: url(../../img/icon-cat-pro.svg) no-repeat;
+ bottom: -28px;
+ left: -30px;
 
-    @media (min-width: $tablet-width) {
-        background-size: 268px 112px;
-        height: 200px;
-        width: 268px;
-        left: auto;
-        right: 28px;
-        top: 60px;
-    }
+ @media (min-width: $tablet-width) {
+  background-size: 268px 112px;
+  height: 200px;
+  width: 268px;
+  left: auto;
+  right: 28px;
+  top: 60px;
+ }
 
-    @media (min-width: $desktop-width) {
-        background-size: 135px 125px;
-        height: 125px;
-        width: 135px;
-        right: 400px;
-        top: -45px;
-    }
+ @media (min-width: $desktop-width) {
+  background-size: 135px 125px;
+  height: 125px;
+  width: 135px;
+  right: 400px;
+  top: -45px;
+ }
 }

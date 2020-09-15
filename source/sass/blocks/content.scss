@@ -52,7 +52,7 @@
         width: 100%;
         height: 695px;
         z-index: -9999;
-        top: -180px;
+        top: -187px;
         left: 535px;
     }
 }
@@ -87,7 +87,7 @@
 
     @media (min-width: $desktop-width) {
         background: url(../../img/index-can-desktop@1x.png);
-        top: -60px;
+        top: -70px;
         right: 515px;
         width: 552px;
         height: 499px;
@@ -104,6 +104,12 @@
         font-size: 60px;
         line-height: 60px;
         text-align: left;
+       
+        margin-top: 42px;
+    }
+
+   @media (min-width: $desktop-width) {
+        margin-top: 30px;
     }
 }
 
@@ -146,6 +152,6 @@
         font-size: 20px;
         line-height: 0px;
         margin-top: 50px;
-        padding: 25px 25px 30px 25px;
+        padding: 28px 30px 28px 30px;
     }
 }

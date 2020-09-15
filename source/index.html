@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fonts/oswaldmedium.woff2">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1fd9feb4-79ae-4809-a166-788826ab1307&lang=ru_RU" type="text/javascript"></script>
     <script src="js/map.js"> </script>
@@ -180,25 +181,21 @@
     <header class="header">
       <div class="header__container">
         <div class="header-links">
-          <a href="" class="header-logo__link" aria-label="На главную">
-            <svg class="header-logo" width="33" height="37">
-              <use xlink:href="#header-logo"></use>
-            </svg>
-            <!-- <img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37"> -->
-          </a>
-          <a href="" aria-label="На главную">
-            <svg class="header-logo__title" width="101" height="18">
-              <use xlink:href="#header-logo-title"></use>
-            </svg>
-            <!-- <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18"> -->
+          <a href="index.html" class="header-logo__link" aria-label="На главную">
+            <picture class="header__logo-options">
+              <source class="header-logo" media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source class="header-logo" media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <source class="header-logo" media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+              <img class="header-logo__logo" src="img/logo-mobile.svg"
+                  alt="логотип cat energy">
+            </picture>
           </a>
         </div>
+
+        <svg class="main-nav__icon" width="24" height="16">
+          <use xlink:href="#header-menu__moblie"></use>
+        </svg>
         <nav class="main-nav">
-
-          <svg class="main-nav__icon" width="24" height="16">
-            <use xlink:href="#header-menu__moblie"></use>
-          </svg>
-
           <ul class="main-nav__list">
             <li class="main-nav__item">
                 <a href="" class="main-nav__link main-nav__link--light">главная</a>
@@ -224,7 +221,6 @@
               <a href="" class="content-button" aria-label="Подобрать программу">подобрать программу</a>
             </div>
           </div>
-          <!-- <a href="" class="content-button" aria-label="Подобрать программу">подобрать программу</a> -->
         </div>
       </div>
       <div class="promo__container">
@@ -293,18 +289,34 @@
 
         <div class="example-cat__wrapper">
           <div class="example-cat">
-            <div class="example__cat-before">
-              <div class="example-controller">
-                <button class="controller__button">было</button>
-                <!-- slider -->
-                  <label for="controller__range-slider">
-                    <input id="controller__range-slider" class="controller__range-slider" type="range"
-                    name="image-slider" min="0" max="100" value="50">
-                  </label>        
-                <button class="controller__button">стало</button>
-              </div>
-            </div>
+            <div class="example__cat-slice">
+              <picture class="example__cat-img-wrapper">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
 
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                <img class="example-cat__img example-cat__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Большой кот">
+              </picture>
+              <picture class="example__cat-img-wrapper">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                <img class="example-cat__img example-cat__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Большой кот">
+              </picture>
+            </div>
+            <div class="example-controller">
+              <button class="controller__button">было</button>
+                <label for="controller__range-slider">
+                  <input id="controller__range-slider" class="controller__range-slider" type="range"
+                  name="image-slider" min="0" max="100" value="50">
+                </label>        
+              <button class="controller__button">стало</button>
+            </div>
           </div>
         </div>
       </section>

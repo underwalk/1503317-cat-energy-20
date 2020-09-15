@@ -5,22 +5,34 @@
     display: flex;
     justify-content: space-between;
     margin-right: 20px;
-
+    width: 100%;
     @media (min-width: $tablet-width) {
         margin-left: 86px;
+        width: 63%;
+    }
+
+    @media (min-width: $desktop-width ) {
+        width: 45%;
     }
 }
 
 .main-nav__list {
-    display: none;
-    
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 5px;
+    padding-left: 15px;
     @media (min-width: $tablet-width) {
         display: flex;
+        flex-direction: row;
         width: 440px;
         margin: 0;
         padding: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 35px;
+        margin: 2px 0 0 7px;
     }
 
     @media (min-width: $desktop-width) {
@@ -30,6 +42,7 @@
 }
 
 .main-nav__icon {
+    display: none;
     @media (min-width: $tablet-width) {
         display: none;
     }
@@ -37,16 +50,21 @@
 
 .main-nav__link {
     @include UnstyledLink;
+
     font-family: Oswald;
     font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
     color: $basic-black;
     text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
-
+        font-size: 18px;
+        line-height: 24px;
     }
 
     @media (min-width: $desktop-width) {
@@ -55,6 +73,14 @@
 
         font-size: 20px;
         line-height: 30px;
+    }
+}
+
+.main-nav__item:last-child {
+    padding-bottom: 0;
+
+    @media (min-width: $tablet-width)  {
+        padding-top: 0;
     }
 }
 
@@ -64,6 +90,8 @@
     }
 }
 
+
 .main-nav__item {
     @include UnstyledList;
+    padding: 20px 0;
 }

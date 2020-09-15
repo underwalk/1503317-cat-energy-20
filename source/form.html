@@ -4,8 +4,10 @@
         <meta charset="utf-8">
         <title>HTML Academy: Кэт энерджи</title>
         
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fonts/oswaldmedium.woff2">
+        <link rel="stylesheet" href="css/styles.min.css">
+
+        <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+        <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     
         <script src="https://api-maps.yandex.ru/2.1/?apikey=1fd9feb4-79ae-4809-a166-788826ab1307&lang=ru_RU" type="text/javascript"></script>
         <script src="js/map.js"> </script>
@@ -138,18 +140,26 @@
         <header class="header">
           <div class="header__container">
             <div class="header-links">
-              <a href="/source/index.html" class="header-logo__link" aria-label="На главную">
+              <!-- <a href="/source/index.html" class="header-logo__link" aria-label="На главную">
                 <svg class="header-logo" width="33" height="37">
                   <use xlink:href="#header-logo"></use>
                 </svg>
-                <!-- <img class="logo" src="https://via.placeholder.com/33x37" alt="logo" width="33" height="37"> -->
+              </a> -->
+              <a href="index.html" class="header-logo__link" aria-label="На главную">
+                <picture class="header__logo-options">
+                  <source class="header-logo" media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source class="header-logo" media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <source class="header-logo" media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                  <img class="header-logo__logo" src="img/logo-mobile.svg"
+                      alt="логотип cat energy">
+                </picture>
               </a>
-              <a href="/source/index.html" aria-label="На главную">
+              <!-- <a href="index.html" aria-label="На главную">
                 <svg class="header-logo__title" width="101" height="18">
                   <use xlink:href="#header-logo-title"></use>
-                </svg>
+                </svg> -->
                 <!-- <img class="logo-text" src="https://via.placeholder.com/101x18" alt="cat energy title" width="101" height="18"> -->
-              </a>
+              <!-- </a> -->
             </div>
             <nav class="main-nav">
     
@@ -159,7 +169,7 @@
     
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                    <a href="/source/index.html" class="main-nav__link">главная</a>
+                    <a href="index.html" class="main-nav__link">главная</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="catalog.html" class="main-nav__link" aria-label="В каталог">каталог продукции</a>
@@ -243,7 +253,7 @@
                   <legend class="form__group-title form__group-title--additional">Дополнительно</legend>
                   <ul class="form__list form__list-additional">
                     <li class="form__item from__item-additional">
-                      <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-sweetener">
+                      <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-sweetener" checked>
                       <label class="form__label form__label-additional" for="ext-sweetener">сахарозаменитель</label>
                     </li>
                     <li class="form__item from__item-additional">
