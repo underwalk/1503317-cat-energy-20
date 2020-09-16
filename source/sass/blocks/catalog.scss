@@ -1,3 +1,6 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
 .catalog-title {
     font-family: Oswald;
     font-style: normal;
@@ -6,7 +9,7 @@
     line-height: 36px;
     margin: 0;
     align-self: center;
-    padding: 30px 0 40px 25px;
+    padding: 30px 0 40px 20px;
     width: 320px;
     border-top: 1px solid $special_grey-2;
     border-bottom: 1px solid $special_grey-2;
@@ -18,11 +21,11 @@
      border: none;
      font-size: 60px;
      line-height: 60px;
-     padding: 55px 0 0 0;
+     padding: 55px 0 0 13px;
     }
 
     @media (min-width: $desktop-width) {
-        padding: 63px 0 0;
+        padding: 46px 0 0;
     }
    }
    
@@ -60,7 +63,7 @@
      height: 100%;
      flex-direction: row;
      column-gap: 60px;
-     row-gap: 140px;
+     row-gap: 142px;
      margin-top: 170px;
     }
    
@@ -80,7 +83,7 @@
     padding-top: 20px;
    
     border-bottom: 1px solid $special_grey-2;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
    
     @media (min-width: $tablet-width) {
      width: 324px;
@@ -105,6 +108,7 @@
    }
    
    .catalog__item-group-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -121,14 +125,16 @@
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
-    margin-left: 35px;
+    // margin-left: 25px;
+    margin-left: 154px;
     width: 100%;
    
     @media (min-width: $tablet-width) {
      align-items: center;
      justify-content: center;
      margin-left: auto;
-     margin-top: 30px;
+    //  margin-top: 30px;
+     margin-top: 157px;
     }
    }
    
@@ -163,12 +169,12 @@
     }
 
     @media (min-width: $desktop-width ){
-        margin-left: 0px;
+        margin-left: 10px;
     }
    }
    
    .catalog__description {
-    margin: 12px 0 0 6px;
+    margin: 14px 0 0 6px;
     display: grid;
     grid-template-columns: max-content auto;
     font-family: Arial;
@@ -176,23 +182,28 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
+
+    color: $special_dark-grey;
    
     @media (min-width: $tablet-width) {
-     width: 247px;
-     grid-row-gap: 15px;
-     margin-top: 25px;
+        width: 247px;
+        grid-row-gap: 16px;
+        margin-top: 23px;
+        margin-left: 0;
     }
    
     @media (min-width: $desktop-width) {
      width: 173px;
      grid-row-gap: 15px;
-     margin-top: 26px;
+     margin-top: 24px;
+     margin-left: 10px;
     }
    }
    
    .catalog__description-title {
     grid-column-start: 1;
-   
+    color: $special_dark-grey;
+
     @media (min-width: $tablet-width) {
      font-size: 16px;
     }
@@ -200,9 +211,10 @@
    
    .catalog__description-text {
     margin-left: auto;
-    margin-right: 15px;
+    margin-right: 20px;
     grid-column-start: 2;
-   
+    color: $special_dark-grey;
+    
     @media (min-width: $tablet-width) {
      font-size: 16px;
      margin-right: 0;
@@ -219,6 +231,7 @@
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
    
     @media (min-width: $tablet-width) {
      font-size: 16px;
@@ -234,21 +247,23 @@
    }
 
 .catalog__link {
-    max-width: 50%;
     display: block;
-    margin-left: 57px;
-    margin-top: 12px;
-    
+    position: absolute;
+    top: -18px;
+    left: 21px;
     @media (min-width: $tablet-width) {
+        margin: 0;
+        max-width: 100%;
         display: flex;
         flex-direction: column-reverse;
         text-align: center;
         min-height: 213px;
-        margin: -86px 90px 0 0;
+        left: 0;
+        top: -91px;
     } 
 
     @media (min-width: $desktop-width ) {
-        margin-right: 130px;
+        // margin-right: 130px;
     }
 }
 
@@ -257,7 +272,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
+
     @media (min-width: $tablet-width) {
      padding-top: 50px;
     }
@@ -290,7 +305,7 @@
    }
    
    .catalog__item-show-more-text {
-    margin: 6px 0 0 0;
+    margin: 8px 0 0 0;
     color: $special_dark-grey;
     font-family: Arial;
     font-style: normal;
@@ -307,7 +322,8 @@
     }
    }
    
-   .a-catalog__a--show-more {
+   .catalog__link-button-more {
+    @include ButtonGrey;
     background-color: $basic_grey;
     color: $special_dark-grey;
     text-transform: uppercase;
@@ -316,15 +332,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-   
+    margin-top: 23px;
     @media (min-width: $tablet-width) {
      margin-top: 85px;
     }
    }
-   
-.catalog__catalog-ext {
-    @media (min-width: $desktop-width) {
-        display: flex;
-        padding-bottom: 82px;
-    }
-}

@@ -1,3 +1,6 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
 .location__info-title {
  font-family: Oswald;
  font-style: normal;
@@ -11,8 +14,8 @@
   font-size: 20px;
   line-height: 25px;
   width: 171px;
-  margin-left: 50px;
-  margin-top: 40px;
+  margin-left: 58px;
+  margin-top: 61px;
  }
 
  @media (min-width: $desktop-width) {
@@ -42,8 +45,8 @@
   line-height: 20px;
   text-align: right;
 
-  margin-right: 75px;
-  margin-top: 40px;
+  margin-right: 156px;
+  margin-top: 59px;
  }
 
  @media (min-width: $desktop-width) {
@@ -55,6 +58,7 @@
 
 .location__map {
  height: 362px;
+ width: 100%;
  @media (min-width: $tablet-width) {
   margin-top: 40px;
   height: 400px;
@@ -85,6 +89,12 @@
   height: 197px;
   background-color: $basic-white;
  }
+
+ @media (min-width: $desktop-width) {
+    top: 87px;
+    left: 320px;
+    width: 551px;
+ }
 }
 
 .location__info-container {
@@ -101,4 +111,8 @@
  @media (min-width: $desktop-width) {
   position: relative;
  }
+}
+
+.location__map-static {
+    position: relative;
 }

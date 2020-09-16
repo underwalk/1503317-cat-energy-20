@@ -25,18 +25,6 @@
  }
 }
 
-.promo__container {
- @include UnstyledList;
-
- display: flex;
- align-self: flex-start;
- justify-content: center;
-
- @media (min-width: $desktop-width) {
-  margin-top: 220px;
- }
-}
-
 .promo__item {
  @include UnstyledList;
  position: relative;
@@ -46,7 +34,7 @@
  margin-top: 0px;
 
  @media (min-width: $tablet-width) {
-  padding: 40px 0 0 35px;
+  padding: 41px 0 0 38px;
   height: 332px;
  }
 
@@ -69,7 +57,7 @@
   text-align: left;
   font-size: 36px;
   line-height: 36px;
-  margin: 35px 0 0 15px;
+  margin: 38px 0 0 18px;
  }
 
  @media (min-width: $desktop-width) {
@@ -170,33 +158,9 @@
  }
 }
 
-.promo__link {
- @include UnstyledLink;
- display: block;
- width: auto;
-
- color: $basic-black;
- padding-top: 18px;
- padding-bottom: 5px;
- border-top: 2px solid $border-color;
- border-spacing: 15px;
- margin-left: 20px;
- margin-right: 20px;
- text-transform: uppercase;
-
- @media (min-width: $tablet-width) {
-  font-size: 20px;
-  line-height: 30px;
-
-  border: none;
-  margin-top: 35px;
-  margin-left: 15px;
- }
-
- @media (min-width: $desktop-width) {
-  margin-top: 10px;
-  margin-left: 56px;
- }
+.promo-link {
+    display: flex;
+    align-items: baseline;
 }
 
 .promo__title-pro {

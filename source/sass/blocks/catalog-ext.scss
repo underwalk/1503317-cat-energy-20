@@ -1,3 +1,6 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
 .catalog-ext {
     display: flex;
     justify-content: center;
@@ -5,6 +8,7 @@
    }
    
    .catalog-ext__container {
+    position: relative;
     display: flex;
     width: 320px;
     flex-direction: column;
@@ -24,19 +28,38 @@
     line-height: 24px;
    
     margin: 0;
-    padding: 25px 20px 0 20px;
+    padding: 29px 20px 0 19px;
    
+    background: $basic_white;
+
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $basic-green;
+        z-index: -99999;
+    }
+
     @media (min-width: $tablet-width) {
      font-size: 36px;
      line-height: 36px;
      width: 338px;
-     padding-right: 35px;
-     margin-left: 15px;
+     padding-right: 39px;
+     margin-left: 18px;
+     padding-top: 26px;
+
+     &::before {
+        top: 85px;
+     }
     }
    
     @media (min-width: $desktop-width) {
-     margin-left: 63px;
-     margin-top: 7px;
+        margin-left: 67px;
+        margin-top: 2px;
     }
    }
    
@@ -75,19 +98,25 @@
    }
    
    .catalog-ext__name {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     margin-top: 20px;
-   
+    color: $special_dark-grey-2;
+
     @media (min-width: $tablet-width) {
+    font-size: 20px;
      margin-left: 40px;
-     margin-top: 25px;
+     margin-top: 29px;
     }
    
     @media (min-width: $desktop-width) {
-     margin-left: 85px;
-     margin-top: 6px;
-     width: 200px;
+        margin-left: 88px;
+        margin-top: 13px;
+        width: 200px;
     }
    }
    
@@ -102,6 +131,7 @@
     @media (min-width: $tablet-width) {
      margin-top: 60px;
      padding-left: 0px;
+     padding-top: 20px;
      gap: 0;
     }
    }
@@ -113,18 +143,18 @@
     margin-left: auto;
     margin-right: auto;
     color: $basic-white;
-   
+    font-size: 16px;
+    
     @media (min-width: $tablet-width) {
      width: 632px;
-     font-size: 16px;
      padding-left: 0px;
      padding-right: 0px;
     }
    
     @media (min-width: $desktop-width) {
-     width: 244px;
+     width: 234px;
      margin: 0;
-     margin-top: -8px;
+     margin-top: 2px;
      align-self: center;
     }
    }
@@ -132,6 +162,10 @@
    .catalog-ext__count {
     @media (min-width: $tablet-width) {
      margin-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 10px;
     }
    }
    
@@ -151,9 +185,9 @@
      font-weight: normal;
      font-size: 16px;
      line-height: 20px;
-     margin-right: 40px;
+     margin-right: 34px;
      justify-content: flex-end;
-     margin-top: 15px;
+     margin-top: 18px;
     }
    
     @media (min-width: $desktop-width) {
@@ -164,9 +198,14 @@
    }
    
    .catalog-ext__price {
+    margin-right: 5px;
+    text-transform: uppercase;
     @media (min-width: $desktop-width) {
      width: 42px;
-     text-transform: uppercase;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 10px;
     }
    }
    
