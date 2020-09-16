@@ -13,9 +13,8 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 
-// Styles
-
-const stylesBuild = () => {
+//Styles Build
+const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -30,24 +29,8 @@ const stylesBuild = () => {
     .pipe(sync.stream());
 }
 
-exports.stylesBuild = stylesBuild;
-
-const styles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename("styles.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
-}
-
 exports.styles = styles;
+
 
 // imagemin
 
@@ -60,9 +43,10 @@ const images = () => {
     ]))
 }
 
+// Images
 exports.images = images;
 
-//  webP
+// WebP
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -72,7 +56,7 @@ const createWebp = () => {
 
 exports.webp = createWebp;
 
-// svg
+// SVG
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
@@ -83,12 +67,13 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "source"
     },
     cors: true,
     notify: false,
@@ -98,6 +83,7 @@ const server = (done) => {
 }
 
 exports.server = server;
+
 
 // Copy
 
@@ -116,7 +102,7 @@ const copy = () => {
 
 exports.copy = copy;
 
-// Del
+// Cleanup
 
 const clean = () => {
   return del("build");
@@ -131,10 +117,11 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-const build = gulp.series(clean, copy, stylesBuild, styles, images, createWebp, sprite);
+//Build
 
+const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
 exports.build = build;
 
 exports.default = gulp.series(
-  build, server, watcher
+  styles, server, watcher
 );

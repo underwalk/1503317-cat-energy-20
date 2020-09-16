@@ -215,18 +215,18 @@
 
                   </fieldset>
 
-                  <fieldset class="form__group form__group--bordered from__group-purpose">
+                  <fieldset class="form__group form__group--bordered form__group-purpose">
                     <legend class="visually-hidden">Цель</legend>
-                    <ul class="form__list from__list-purpose">
-                      <li class="form__item from__item-target">
+                    <ul class="form__list form__list-purpose">
+                      <li class="form__item">
                         <input class="form__input-radio" type="radio" name="target" id="target-slim" checked>
                         <label class="form__label-radio" for="target-slim">похудение</label>
                       </li>
-                      <li class="form__item from__item-target">
+                      <li class="form__item">
                         <input class="form__input-radio" type="radio" name="target" id="target-fat">
                         <label class="form__label-radio" for="target-fat">набор массы</label>
                       </li>
-                      <li class="form__item from__item-target">
+                      <li class="form__item">
                         <input class="form__input-radio" type="radio" name="target" id="target-unknown">
                         <label class="form__label-radio" for="target-unknown">Не знаю (Нужен ваш совет)</label>
                       </li>
@@ -236,18 +236,18 @@
 
                 <fieldset class="form__group form__group-contacts">
                   <legend class="form__group-title">Контактные данные (владельца кота)</legend>
-                  <ul class="form__list from__list-contacts">
-                    <li class="form__item from__item-contacts">
-                      <label class="form__label" for="email" required>e-mail:*</label>
+                  <ul class="form__list form__list-contacts">
+                    <li class="form__item form__item-contacts">
+                      <label class="form__label" for="email">e-mail:*</label>
                       <div class="form__input-text-container">
-                        <input class="form__input-text" type="email" name="form__email" id="email" placeholder="kuklachev@gmail.com">
+                        <input class="form__input-text" type="email" name="form__email" id="email" placeholder="kuklachev@gmail.com" required>
                         <svg class="form__input-icon" width="18" height="13">
                           <use xlink:href="#icon-mail"></use>
                         </svg>
                       </div>
                     </li>
 
-                    <li class="form__item from__item-contacts">
+                    <li class="form__item form__item-contacts">
                       <label class="form__label" for="phone">телефон:*</label>
                       <div class="form__input-text-container">
                         <input class="form__input-text" type="number" name="form__phone" id="phone" placeholder="8 (960) 900-60-90" required>
@@ -267,22 +267,22 @@
                   <textarea class="form__textarea" name="form__textarea" id="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
                 </fieldset>
 
-                <fieldset class="form__group from__group--additional">
+                <fieldset class="form__group form__group--additional">
                   <legend class="form__group-title form__group-title--additional">Дополнительно</legend>
                   <ul class="form__list form__list-additional">
-                    <li class="form__item from__item-additional">
+                    <li class="form__item form__item-additional">
                       <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-sweetener" checked>
                       <label class="form__label form__label-additional" for="ext-sweetener">сахарозаменитель</label>
                     </li>
-                    <li class="form__item from__item-additional">
+                    <li class="form__item form__item-additional">
                       <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-water">
                       <label class="form__label form__label-additional" for="ext-water">питьевая вода</label>
                     </li>
-                    <li class="form__item from__item-additional">
+                    <li class="form__item form__item-additional">
                       <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-milk">
                       <label class="form__label form__label-additional" for="ext-milk">молоко</label>
                     </li>
-                    <li class="form__item from__item-additional">
+                    <li class="form__item form__item-additional">
                       <input class="form__input-checkbox" type="checkbox" name="extention" id="ext-vitamins">
                       <label class="form__label form__label-additional" for="ext-vitamins">витамины</label>
                     </li>
@@ -313,7 +313,7 @@
                   <picture class="map-static__image">
                     <source type="image/webp" media="(min-width: 1150px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-                    <source type="image/webp"media="(max-width: 768px)" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 768px)" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
                     <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">

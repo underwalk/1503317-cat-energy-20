@@ -50,7 +50,7 @@
 .page-main__example-cat-wapper {
   position: relative;
   min-width: 320px;
-  margin-left: auto;
+  // margin-left: auto;
   margin-right: auto;
 
   padding-bottom: 30px;
@@ -66,7 +66,7 @@
   @media (min-width: $desktop-width){
       // min-width: $desktop-width;
       background: unset;
-      margin-left: 57px;
+      // margin-left: 57px;
       padding-bottom: 0;
   }
 
