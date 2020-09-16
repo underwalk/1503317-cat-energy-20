@@ -19,3 +19,11 @@
 @import "blocks/form.scss";
 @import "blocks/page-main.scss";
 @import "blocks/location.scss";
+@import "blocks/controller.scss";
+@import "blocks/map-static.scss";
+@import "blocks/promo-link.scss";
+
+img {
+  max-width: 100%;
+  height: auto;
+}

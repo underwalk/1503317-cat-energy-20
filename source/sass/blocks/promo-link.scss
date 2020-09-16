@@ -1,0 +1,60 @@
+.promo-link__ref {
+    @include UnstyledLink;
+    display: flex;
+    width: auto;
+    
+    color: $basic-black;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-top: 2px solid $border-color;
+    border-spacing: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+   
+    @media (min-width: $tablet-width) {
+     font-size: 20px;
+     line-height: 30px;
+   
+     border: none;
+     margin-top: 35px;
+     margin-left: 15px;
+    }
+   
+    @media (min-width: $desktop-width) {
+     margin-top: 10px;
+     margin-left: 56px;
+    }
+   }
+
+.promo-link__ref-icon {
+    padding-top: 5px;
+    padding-left: 12px;
+    display: block;
+
+    @media (min-width: $desktop-width) {
+        padding-top: 12px;
+        padding-left: 21px;
+    }
+}
+
+.promo-link__ref-icon_hovered {
+    padding-top: 5px;
+    padding-left: 12px;
+    display: none;
+
+    @media (min-width: $desktop-width) {
+        padding-top: 12px;
+        padding-left: 21px;
+    }
+}
+
+.promo-link__ref:hover {
+    .promo-link__ref-icon_hovered {
+        display: block;
+    }
+
+    .promo-link__ref-icon {
+        display: none;
+    }
+}

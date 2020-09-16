@@ -2,11 +2,26 @@
 @import "abstracts/variables.scss";
 
 .header {
-    display: flex;
-    padding: 11px 20px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  padding: 0 20px 15px 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+      padding-bottom: 0px;
+      width: $tablet-width;
+
+      
+  }
+
+  @media (min-width: $desktop-width) {
+      margin-top: 35px;
+      width: $desktop-width;
+  }
 }
+
 
 .header__container {
     display: flex;
@@ -14,8 +29,78 @@
     align-items: center;
     width: 320px;
     padding: 0 10px 0 10px;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet-width) {
+        width: $tablet-width;
+        margin-top: 38px;
+        justify-content: flex-start;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: $desktop-width;
+        margin-top: 30px;
+        padding-bottom: 4px;
+        justify-content: space-between;
+    }
 }
 
-.header-logo__link {
+.header-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 100px;
+    }
+}
+
+.header-links__link {
     margin-left: 20px;
+    width: 191px;
+
+    @media (min-width: $tablet-width) {
+        margin-left: -17px;
+        margin-top: -5px;
+        width: 184px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: -17px;
+        margin-top: -5px;
+        width: 208px;
+    }
+}
+
+.header__logo-img:hover {
+    opacity: 0.8;
+}
+
+.header__logo-img:active {
+    opacity: 0.6;
+}
+
+.header__main-nav-icon{
+    display: none;
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+}
+
+
+.header--preview::after {
+    @media (min-width: $desktop-width) {
+        display: block;
+        width: 50%;
+        min-height: 696px;
+        top: 0;
+        right: 0;
+        left: inherit;
+        background-image: url(../img/index-background-desktop@1x.jpg);
+        background-color: #63a73a;
+        background-position: 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }

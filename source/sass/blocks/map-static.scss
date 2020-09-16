@@ -1,0 +1,32 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+.map-static__image {
+    position: absolute;
+    top: -348px;
+    left: 227px;
+
+    @media (min-width: $tablet-width) {
+        top: -399px;
+        left: -52px;
+    }
+
+    @media (min-width: $desktop-width) {
+        top: -409px;
+        left: 1px;
+    }
+}
+
+.map-static__pin {
+    position: absolute;
+
+    @media (min-width: $tablet-width) {
+        top: -251px;
+        right: 324px;
+    }
+
+    @media (min-width: $desktop-width) {
+        top: -279px;
+        right: 414px;
+    }
+
+}

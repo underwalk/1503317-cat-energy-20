@@ -1,57 +1,175 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
 .catalog-ext {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.catalog-ext__container {
+   }
+   
+   .catalog-ext__container {
+    position: relative;
     display: flex;
     width: 320px;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.catalog-ext__title {
+   
+    @media (min-width: $tablet-width) {
+     padding-top: 40px;
+     width: 100%;
+    }
+   }
+   
+   .catalog-ext__title {
     font-family: Oswald;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
-
+   
     margin: 0;
-    padding: 25px 20px 0 20px;
-}
+    padding: 29px 20px 0 19px;
+   
+    background: $basic_white;
 
-.catalog-ext__item{
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $basic-green;
+        z-index: -99999;
+    }
+
+    @media (min-width: $tablet-width) {
+     font-size: 36px;
+     line-height: 36px;
+     width: 338px;
+     padding-right: 39px;
+     margin-left: 18px;
+     padding-top: 26px;
+
+     &::before {
+        top: 85px;
+     }
+    }
+   
+    @media (min-width: $desktop-width) {
+        margin-left: 67px;
+        margin-top: 2px;
+    }
+   }
+   
+   .catalog-ext__item {
     @include UnstyledList;
     color: $special_dark-grey;
-}
-
-.catalog-ext__name {
+   
+    @media (min-width: $tablet-width) {
+     width: 708px;
+     outline: 1px solid $special_grey;
+     padding-bottom: 30px;
+     padding-bottom: 3px;
+     height: 135px;
+    }
+   
+    @media (min-width: $desktop-width) {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 979px;
+     height: 72px;
+     padding-bottom: 0;
+    }
+   }
+   
+   .catalog-ext__item-container {
+    @media (min-width: $tablet-width) {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+   
+    @media (min-width: $desktop-width) {
+     width: 735px;
+    }
+   }
+   
+   .catalog-ext__name {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     margin-top: 20px;
-}
+    color: $special_dark-grey-2;
 
-.catalog-ext__list {
+    @media (min-width: $tablet-width) {
+    font-size: 20px;
+     margin-left: 40px;
+     margin-top: 29px;
+    }
+   
+    @media (min-width: $desktop-width) {
+        margin-left: 88px;
+        margin-top: 13px;
+        width: 200px;
+    }
+   }
+   
+   .catalog-ext__list {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 25px 0 0 22px;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-.catalog-ext__button{
+   
+    @media (min-width: $tablet-width) {
+     margin-top: 60px;
+     padding-left: 0px;
+     padding-top: 20px;
+     gap: 0;
+    }
+   }
+   
+   .catalog-ext__button {
     @include Button;
     width: 260px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     color: $basic-white;
-}
+    font-size: 16px;
+    
+    @media (min-width: $tablet-width) {
+     width: 632px;
+     padding-left: 0px;
+     padding-right: 0px;
+    }
+   
+    @media (min-width: $desktop-width) {
+     width: 234px;
+     margin: 0;
+     margin-top: 2px;
+     align-self: center;
+    }
+   }
+   
+   .catalog-ext__count {
+    @media (min-width: $tablet-width) {
+     margin-right: 50px;
+    }
 
-.catalog-ext__info {
+    @media (min-width: $desktop-width) {
+        margin-top: 10px;
+    }
+   }
+   
+   .catalog-ext__info {
     display: flex;
     justify-content: space-between;
     font-family: Arial;
@@ -60,4 +178,34 @@
     font-size: 14px;
     line-height: 14px;
     color: $special_dark-grey-2;
-}
+   
+    @media (min-width: $tablet-width) {
+     font-family: Arial;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 16px;
+     line-height: 20px;
+     margin-right: 34px;
+     justify-content: flex-end;
+     margin-top: 18px;
+    }
+   
+    @media (min-width: $desktop-width) {
+     justify-content: space-between;
+     width: 286px;
+     margin-top: 0;
+    }
+   }
+   
+   .catalog-ext__price {
+    margin-right: 5px;
+    text-transform: uppercase;
+    @media (min-width: $desktop-width) {
+     width: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 10px;
+    }
+   }
+   

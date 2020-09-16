@@ -6,6 +6,15 @@
     text-align: center;
 }
 
+@mixin CenteredContainer {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+}
+
 @mixin IndentZero {
     margin: 0;
     padding: 0;
@@ -41,6 +50,28 @@
     line-height: 18px;
 
     padding: 10px;
+
+    &:hover {
+        background-color: $basic_green-2;
+    }
+
+    &:active {
+        color: $white-opacity-3;
+    }
+}
+
+@mixin ButtonGrey {
+    background: $basic-white;
+
+    &:hover {
+        background-color: $basic_grey-hover;
+    }
+
+    &:active{
+        color: $special_dark-grey;
+        opacity: 0.3;
+    }
+
 }
 
 @mixin UnstyledLink {

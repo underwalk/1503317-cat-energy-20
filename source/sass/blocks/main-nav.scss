@@ -5,12 +5,113 @@
     display: flex;
     justify-content: space-between;
     margin-right: 20px;
+    width: 100%;
+    @media (min-width: $tablet-width) {
+        margin-left: 78px;
+        width: 63%;
+    }
+
+    @media (min-width: $desktop-width ) {
+        width: 45%;
+    }
 }
 
 .main-nav__list {
-    @media ($mobile-width-only) {
-        display: none;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 5px;
+    padding-left: 15px;
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: row;
+        width: 440px;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+        gap: 35px;
+        margin: 2px 0 0 7px;
     }
-    display: none;
-    height: 65px;
+
+    @media (min-width: $desktop-width) {
+        width: 578px;
+        margin-right: 10px;
+    }
+}
+
+.main-nav__link {
+    @include UnstyledLink;
+
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-black;
+    text-transform: uppercase;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 30px;
+
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.main-nav__item:last-child {
+    padding-bottom: 0;
+
+    @media (min-width: $tablet-width)  {
+        padding-top: 0;
+    }
+}
+
+.main-nav__link--light {
+    @media (min-width: $desktop-width) {
+        color: $basic-white;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.main-nav__link--light-active {
+    border-bottom: 2px solid $basic-white;
+    padding-bottom: 5px;
+}
+
+
+.main-nav__link--active {
+    border-bottom: 2px solid $basic-green;
+    padding-bottom: 5px;
+}
+
+
+.main-nav__item {
+    @include UnstyledList;
+    padding: 20px 0;
 }

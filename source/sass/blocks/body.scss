@@ -2,15 +2,24 @@
 @import "abstracts/variables.scss";
 
 body {
-    width: 100%;
-    margin: auto;
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-    padding: 0 20px 22px 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  margin: 0;
+  // padding: 0 20px 22px 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
 
-  .visually-hidden {
-    @include VisuallyHidden;
-  }
+.visually-hidden {
+ @include VisuallyHidden;
+}

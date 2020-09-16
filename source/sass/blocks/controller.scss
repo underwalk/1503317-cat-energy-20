@@ -1,3 +1,6 @@
+@import "abstracts/mixin.scss";
+@import "abstracts/variables.scss";
+
 .controller__progress-bar {
     background: #FFFFFF;
     width: 84px;
@@ -14,4 +17,134 @@
     border-radius: 6px;
     width: 35px;
     height: 6px;
+}
+
+.controller__button {
+    background: transparent;
+    @media (min-width: $tablet-width) {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.controller__button:first-child {
+    margin-right: 15px;
+}
+
+.controller__button:last-child {
+    margin-left: 20px;
+
+    @media (min-width: $tablet-width) {
+        margin-left: 25px;
+    };
+}
+
+
+.controller__button {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    
+    outline:0;
+    border: 0;
+    text-transform: uppercase;
+    border-bottom: 2px dotted $underline-dotted-24;
+    &:hover { 
+        border-bottom: 2px solid $underline-solid-4;
+    }
+
+    &:active {
+        border-bottom: none;
+    }
+
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;  
+    }
+}
+
+//slider
+
+.slider__scale {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 6px;
+    width: 85px;
+    height: 14px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+  
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+  }
+  
+  .slider__grip {
+    flex-shrink: 0;
+    display: block;
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $basic-green;
+    cursor: pointer;
+    transition: margin-left 0.35s ease-out;
+        @media (min-width: $tablet-width) {
+        display: none;
+    }
+  }
+
+//mobile end
+
+.controller__button-range-slider {
+    display: none;
+    width: 84px;
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    appearance: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+        width: 428px;
+    }
+  }
+  
+.controller__button-range-slider:focus {
+    outline: none;
+}
+
+.controller__button-range-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: $silder-line;
+}
+
+.controller__button-range-slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -8px;
+    margin-left: -1px;
+    background: $basic-white;
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    box-shadow: 0 2px 5px $underline-solid-4;
+    &:hover {
+        border: 1px solid $basic-green;
+    }
+}
+
+.controller__button-range-slider::-webkit-slider-thumb:hover {
+    width: 22px;
+    height: 22px;
+    margin-top: -8px;
+    margin-left: -1px;
 }
